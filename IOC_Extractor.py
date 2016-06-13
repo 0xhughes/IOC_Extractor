@@ -77,7 +77,7 @@ def createWriteQuery():
 #			queryFileObjFN.write(queryDict[key]+'\r\n')
 
 def Clear():
-	os.system('cls')
+	os.system('cls' if os.name == 'nt' else 'clear')
 
 def findWriteMD5(cellValue):
 	strItems = ""
